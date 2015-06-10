@@ -14,9 +14,9 @@ import Color exposing (..)
 
 -- model
 
-redDots={ pos  = (0,10)
+redDots={  pos  = (0,10)
           ,vel = (-10,0)
-          ,dia = 10
+          ,dia = 5
         }
 
 -- render
@@ -27,10 +27,12 @@ scene (x,y) (w,h) =
       dot (dia,pos) = circle dia |> filled red |> move pos
       dots = dot
  in
-       collage w h dot
-        [  circle 13
+       collage w h
+        [   circle 8
             |> filled blue
             |> move (dx, dy)
+        , circle 3
+            |> filled red
         ] |> color black
 
 
